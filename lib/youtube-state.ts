@@ -103,7 +103,6 @@ function pickThumbURL(thumbnails?: YTThumbs): string | null {
 
 export async function fetchStateOfNativewind(): Promise<Item[]> {
   const key = process.env.YOUTUBE_API_KEY!;
-  console.log("key", key);
   const playlistId = "PLTJ_03aE21aqjklDI99Ny82TEit4BqsMM";
   if (!key || !playlistId) return [];
 
@@ -115,7 +114,6 @@ export async function fetchStateOfNativewind(): Promise<Item[]> {
   do {
     const url = pageToken ? `${base}&pageToken=${pageToken}` : base;
     const r = await fetch(url, { next: { revalidate: 60 * 60 * 24 * 7 } }); // cache 7 days
-    console.log("r", r);
     const data = await r.json();
     (data.items || []).forEach((it: any) => {
       const vid = it.contentDetails?.videoId;
