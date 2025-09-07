@@ -1,0 +1,29 @@
+---
+title: _rn-new command helper
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
+
+<Tabs groupId="npm-install" items={["npm", "yarn", "pnpm", "bun"]}>
+  <Tab value="npm">
+    <CodeBlock language="bash">
+      <Pre>npx rn-new --nativewind</Pre>
+    </CodeBlock>
+  </Tab>
+  <Tab value="yarn">
+    <CodeBlock language="bash">
+      <Pre>npx rn-new --nativewind --yarn</Pre>
+    </CodeBlock>
+  </Tab>
+  <Tab value="pnpm">
+    <CodeBlock language="bash">
+      <Pre>pnpx rn-new --nativewind</Pre>
+    </CodeBlock>
+  </Tab>
+  <Tab value="bun">
+    <CodeBlock language="bash">
+      <Pre>bunx rn-new --nativewind</Pre>
+    </CodeBlock>
+  </Tab>
+</Tabs>

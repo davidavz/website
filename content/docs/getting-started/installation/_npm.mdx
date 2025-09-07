@@ -38,7 +38,7 @@ import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
     <CodeBlock language="bash">
       <Pre>
         {[
-          props.deps?.length ? `pnpm install ${props.deps.join(" ")}` : undefined,
+          props.deps?.length ? `pnpm add ${props.deps.join(" ")}` : undefined,
           props.devDeps?.length
             ? `pnpm add --save-dev ${props.devDeps.join(" ")}`
             : undefined,
