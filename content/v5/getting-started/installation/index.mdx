@@ -61,7 +61,10 @@ export default {
 Create a `global.css` file and add the Tailwind directives.
 
 ```css title="global.css"
-@import "tailwindcss";
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
 @import "nativewind/theme";
 ```
 
